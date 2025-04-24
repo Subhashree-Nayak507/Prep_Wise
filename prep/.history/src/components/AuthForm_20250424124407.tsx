@@ -42,8 +42,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
         toast.success('Account created successfully');
         router.push('/sign-in');
       } else {
-        toast.success('Sign in successfully');
-        router.push('/');
+        console.log('signin', data);
       }
     } catch (error) {
       console.log(error);

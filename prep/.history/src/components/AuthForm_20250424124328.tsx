@@ -42,8 +42,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
         toast.success('Account created successfully');
         router.push('/sign-in');
       } else {
-        toast.success('Sign in successfully');
-        router.push('/');
+        console.log('signin', data);
       }
     } catch (error) {
       console.log(error);
@@ -54,7 +53,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
   return (
     <div className="card-border lg:min-w-[556px]">
       <div className="flex flex-col gap-6 card py-14 px-10">
-        <div className="flex flex-row gap-4 justify-center">
+        <div className="flex flex-row gap-2 justify-center">
           <Image src="/logo.svg" alt="logo" height={32} width={38} />
           <h2 className="text-primary-100">Prep_Wise</h2>
         </div>
